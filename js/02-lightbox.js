@@ -18,21 +18,8 @@ const itemsList = galleryItems
   .join("");
 listRef.innerHTML = itemsList;
 
-const scriptRef = document.createElement("script");
-scriptRef.src =
-  "https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.7.0/simple-lightbox.min.js";
-document.head.appendChild(scriptRef);
-
-const linkRef = document.createElement("link");
-linkRef.rel = "stylesheet";
-linkRef.href =
-  "https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.7.0/simple-lightbox.min.css";
-document.head.appendChild(linkRef);
-
-scriptRef.onload = () => {
-  const lightbox = new SimpleLightbox(".gallery a", {
-    captionsData: "alt",
-    captionDelay: 250,
-    captionPosition: "bottom",
-  });
-};
+const lightbox = new SimpleLightbox(".gallery a", {
+  captionsData: "alt",
+  captionDelay: 250,
+  captionPosition: "bottom",
+});
